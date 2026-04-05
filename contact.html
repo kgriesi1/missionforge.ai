@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact, Mission Forge AI</title>
+  <meta name="description" content="Start a conversation with Mission Forge AI. We work with public agencies, private enterprises, nonprofits, and startups united by a mission to make the world better, safer, and more just." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-mark">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <defs><clipPath id="forge-clip"><circle cx="18" cy="18" r="18"/></clipPath></defs>
+            <circle cx="18" cy="18" r="18" fill="#09172E"/>
+            <g clip-path="url(#forge-clip)">
+              <!-- Anvil (gold) horn on left, flat top, stepped waist, wide base -->
+              <path d="M7.5 19 L11 17 L25 17 L25 20 L23 20 L23 23 L25 23 L25 27 L11 27 L11 23 L13 23 L13 20 L11 20 Z" fill="#C49A3C"/>
+              <!-- Sledgehammer (white) from upper-left, pivot at anvil strike -->
+              <g transform="rotate(40 17 17)">
+                <rect x="15.5" y="0" width="3" height="12" rx="1.5" fill="#FFFFFF"/>
+                <rect x="11" y="11" width="12" height="6.5" rx="1" fill="#FFFFFF"/>
+              </g>
+              <!-- Impact glow at strike point -->
+              <ellipse cx="17" cy="17" rx="5" ry="2" fill="#F0B845" opacity="0.3"/>
+              <!-- Forge sparks: elongated diamonds pointing in travel direction -->
+              <path d="M0 -2.8 L0.65 0 L0 2.8 L-0.65 0 Z" transform="translate(22 12) rotate(-45)" fill="#F5EDD3"/>
+              <path d="M0 -2.2 L0.55 0 L0 2.2 L-0.55 0 Z" transform="translate(26 9) rotate(-52)" fill="#F5EDD3" opacity="0.92"/>
+              <path d="M0 -1.9 L0.48 0 L0 1.9 L-0.48 0 Z" transform="translate(28.5 13.5) rotate(-28)" fill="#F5EDD3" opacity="0.85"/>
+              <path d="M0 -1.5 L0.42 0 L0 1.5 L-0.42 0 Z" transform="translate(30 9) rotate(-58)" fill="#F5EDD3" opacity="0.75"/>
+              <path d="M0 -1.3 L0.38 0 L0 1.3 L-0.38 0 Z" transform="translate(27.5 6) rotate(-44)" fill="#F5EDD3" opacity="0.68"/>
+              <circle cx="24.5" cy="7.5" r="0.6" fill="#F5EDD3" opacity="0.72"/>
+              <circle cx="23" cy="9" r="0.48" fill="#F5EDD3" opacity="0.65"/>
+            </g>
+          </svg>
+        </div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">Mission Forge</span>
+          <span class="nav__logo-sub">Artificial Intelligence</span>
+        </div>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html"     class="nav__link">Home</a>
+        <a href="services.html"  class="nav__link">Services</a>
+        <a href="about.html"     class="nav__link">About</a>
+        <a href="contact.html"   class="nav__link nav__cta active">Start a Conversation</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container page-header__content">
+      <div class="gold-line fade-up"></div>
+      <span class="eyebrow fade-up">Let's Talk</span>
+      <h1 class="fade-up fade-up-delay-1">Start a Conversation</h1>
+      <p class="lead fade-up fade-up-delay-2">
+        No pitch, no pressure. We start every potential engagement the same way: an honest exchange about where your organization is, what's working, and where you want to go.
+      </p>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-section__inner">
+
+        <!-- LEFT: INFO -->
+        <div>
+          <div class="gold-line fade-up"></div>
+          <span class="eyebrow fade-up">Get in Touch</span>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);margin-top:16px;margin-bottom:32px;" class="fade-up fade-up-delay-1">
+            We'd Love to<br>Hear from You
+          </h2>
+
+          <div style="padding:32px;background:var(--off-white);margin-top:40px;border-left:3px solid var(--gold);" class="fade-up">
+            <div class="eyebrow" style="margin-bottom:16px;">What to Expect</div>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div style="display:flex;gap:12px;align-items:flex-start;font-size:.9rem;color:var(--text-secondary);">
+                <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px;">01</span>
+                <span><strong style="color:var(--text-primary);">A principal responds personally.</strong> Every message goes directly to our team leadership. You won't hear from a sales team.</span>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;font-size:.9rem;color:var(--text-secondary);">
+                <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px;">02</span>
+                <span><strong style="color:var(--text-primary);">A 30-minute discovery call.</strong> If there's potential fit, we will suggest a short conversation (no commitment required).</span>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;font-size:.9rem;color:var(--text-secondary);">
+                <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px;">03</span>
+                <span><strong style="color:var(--text-primary);">Honest fit assessment.</strong> We only engage where we can genuinely add value. If another path is better for your organization, we'll say so.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quote -->
+          <div style="margin-top:48px;" class="fade-up">
+            <blockquote style="font-family:var(--font-serif);font-size:1.1rem;font-style:italic;color:var(--navy-dark);line-height:1.6;border-left:2px solid var(--gold);padding-left:24px;">
+              "Clear communication with executives, engineers, and managers — translating high-level expectations into specific plans and accountability. That is what separates strategy from execution."
+            </blockquote>
+            <cite style="display:block;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:12px;margin-left:24px;">Director of Digital Strategy, Global Humanitarian Nonprofit</cite>
+          </div>
+        </div>
+
+        <!-- RIGHT: FORM -->
+        <div>
+          <form
+            class="contact-form fade-up"
+            id="contactForm"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+            <!-- Note: Replace YOUR_FORM_ID with your Formspree form ID after signing up at formspree.io -->
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Your Name *</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="jane@example.org" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="organization">Organization</label>
+                <input class="form-input" type="text" id="organization" name="organization" placeholder="Your organization name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone (optional)</label>
+                <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="interest">Primary Interest</label>
+              <select class="form-select" id="interest" name="interest">
+                <option value="" disabled selected>Select what best fits your situation…</option>
+                <option value="ai-strategy">AI Strategy &amp; Roadmap</option>
+                <option value="architecture">Enterprise Architecture</option>
+                <option value="transformation">Digital Transformation</option>
+                <option value="fractional-cto">Fractional CPTO / CTO</option>
+                <option value="board-advisory">Board Advisory</option>
+                <option value="ai-ethics">AI Ethics &amp; Governance</option>
+                <option value="not-sure">Not sure yet, just exploring</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Tell Us About Your Organization *</label>
+              <textarea
+                class="form-textarea"
+                id="message"
+                name="message"
+                placeholder="What does your organization do? What's your biggest challenge or opportunity with technology right now? There are no wrong answers here."
+                required
+              ></textarea>
+            </div>
+
+            <div style="display:flex;align-items:flex-start;gap:12px;" class="form-group">
+              <input type="checkbox" id="consent" name="consent" required style="margin-top:3px;accent-color:var(--gold);width:16px;height:16px;flex-shrink:0;" />
+              <label for="consent" style="font-size:.82rem;color:var(--text-secondary);cursor:pointer;">
+                I understand that Mission Forge AI will use my information to respond to my inquiry. I won't receive spam — just a genuine response from our team.
+              </label>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn--gold btn--arrow" style="width:100%;justify-content:center;">
+                Send Message
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--off-white">
+    <div class="container" style="max-width:840px;">
+      <div class="text-center mb-64">
+        <div class="gold-line gold-line--center fade-up"></div>
+        <span class="eyebrow fade-up">Common Questions</span>
+        <h2 class="fade-up fade-up-delay-1" style="margin-top:16px;">Before You Reach Out</h2>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:0;" class="fade-up">
+
+        <div style="padding:32px 0;border-bottom:1px solid var(--light-gray);">
+          <h4 style="margin-bottom:10px;color:var(--navy-dark);">Do you only work with large organizations?</h4>
+          <p style="font-size:.95rem;">Not at all. We've led teams of 225 people and helped individual founders think through their first technology hire. What matters is that your work is mission-driven and that we can add genuine value, not headcount.</p>
+        </div>
+
+        <div style="padding:32px 0;border-bottom:1px solid var(--light-gray);">
+          <h4 style="margin-bottom:10px;color:var(--navy-dark);">We're a small nonprofit. Can we afford this?</h4>
+          <p style="font-size:.95rem;">Mission drives engagement structure. We work with organizations across a wide range of budget realities, and we're committed to scoping engagements that deliver real return. Start the conversation, and we'll be honest about fit.</p>
+        </div>
+
+        <div style="padding:32px 0;border-bottom:1px solid var(--light-gray);">
+          <h4 style="margin-bottom:10px;color:var(--navy-dark);">What if we're not sure what kind of help we need?</h4>
+          <p style="font-size:.95rem;">That's the most common starting point. A discovery conversation is designed exactly for this. We'll help you name what's really going on before any services are discussed.</p>
+        </div>
+
+        <div style="padding:32px 0;border-bottom:1px solid var(--light-gray);">
+          <h4 style="margin-bottom:10px;color:var(--navy-dark);">Do you work with secular organizations?</h4>
+          <p style="font-size:.95rem;">Yes. Our work is guided by values-driven leadership, but Mission Forge AI serves any organization where purpose and people come before profit, regardless of religious affiliation.</p>
+        </div>
+
+        <div style="padding:32px 0;">
+          <h4 style="margin-bottom:10px;color:var(--navy-dark);">How quickly can we get started?</h4>
+          <p style="font-size:.95rem;">We are intentional about the engagements we take on, which means capacity is limited at any given time. Reach out as early as possible, even if your start date is months away.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand-name">Mission Forge AI</div>
+          <p class="footer__brand-desc">AI strategy and enterprise architecture for organizations that exist to serve people and change the world.</p>
+          <a href="contact.html" class="footer__link">Start a Conversation</a>
+        </div>
+        <div>
+          <div class="footer__heading">Navigate</div>
+          <div class="footer__links">
+            <a href="index.html"    class="footer__link">Home</a>
+            <a href="services.html" class="footer__link">Services</a>
+            <a href="about.html"    class="footer__link">About</a>
+            <a href="contact.html"  class="footer__link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Services</div>
+          <div class="footer__links">
+            <a href="services.html#ai-strategy"    class="footer__link">AI Strategy</a>
+            <a href="services.html#architecture"   class="footer__link">Enterprise Architecture</a>
+            <a href="services.html#transformation" class="footer__link">Digital Transformation</a>
+            <a href="services.html#interim-cto"    class="footer__link">Fractional CPTO/CTO</a>
+            <a href="services.html#advisory"       class="footer__link">Board Advisory</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Connect</div>
+          <div class="footer__links">
+            <a href="contact.html" class="footer__link">Contact Us</a>
+            <a href="https://www.linkedin.com/company/mission-forge-ai/" target="_blank" rel="noopener" class="footer__link">Company LinkedIn</a>
+            <a href="contact.html" class="footer__link">Book a Discovery Call</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 Mission Forge AI. All rights reserved.</div>
+        <div class="footer__legal-links">
+          <a href="privacy.html" class="footer__legal-link">Privacy</a>
+          <a href="#" class="footer__legal-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

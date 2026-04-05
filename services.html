@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services, Mission Forge AI</title>
+  <meta name="description" content="AI Strategy, AI Implementation, Organizational Transformation, Fractional CPTO/CTO, Responsible AI Governance, and Board Advisory for mission-driven organizations." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-mark">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <defs><clipPath id="forge-clip"><circle cx="18" cy="18" r="18"/></clipPath></defs>
+            <circle cx="18" cy="18" r="18" fill="#09172E"/>
+            <g clip-path="url(#forge-clip)">
+              <!-- Anvil (gold) horn on left, flat top, stepped waist, wide base -->
+              <path d="M7.5 19 L11 17 L25 17 L25 20 L23 20 L23 23 L25 23 L25 27 L11 27 L11 23 L13 23 L13 20 L11 20 Z" fill="#C49A3C"/>
+              <!-- Sledgehammer (white) from upper-left, pivot at anvil strike -->
+              <g transform="rotate(40 17 17)">
+                <rect x="15.5" y="0" width="3" height="12" rx="1.5" fill="#FFFFFF"/>
+                <rect x="11" y="11" width="12" height="6.5" rx="1" fill="#FFFFFF"/>
+              </g>
+              <!-- Impact glow at strike point -->
+              <ellipse cx="17" cy="17" rx="5" ry="2" fill="#F0B845" opacity="0.3"/>
+              <!-- Forge sparks: elongated diamonds pointing in travel direction -->
+              <path d="M0 -2.8 L0.65 0 L0 2.8 L-0.65 0 Z" transform="translate(22 12) rotate(-45)" fill="#F5EDD3"/>
+              <path d="M0 -2.2 L0.55 0 L0 2.2 L-0.55 0 Z" transform="translate(26 9) rotate(-52)" fill="#F5EDD3" opacity="0.92"/>
+              <path d="M0 -1.9 L0.48 0 L0 1.9 L-0.48 0 Z" transform="translate(28.5 13.5) rotate(-28)" fill="#F5EDD3" opacity="0.85"/>
+              <path d="M0 -1.5 L0.42 0 L0 1.5 L-0.42 0 Z" transform="translate(30 9) rotate(-58)" fill="#F5EDD3" opacity="0.75"/>
+              <path d="M0 -1.3 L0.38 0 L0 1.3 L-0.38 0 Z" transform="translate(27.5 6) rotate(-44)" fill="#F5EDD3" opacity="0.68"/>
+              <circle cx="24.5" cy="7.5" r="0.6" fill="#F5EDD3" opacity="0.72"/>
+              <circle cx="23" cy="9" r="0.48" fill="#F5EDD3" opacity="0.65"/>
+            </g>
+          </svg>
+        </div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">Mission Forge</span>
+          <span class="nav__logo-sub">Artificial Intelligence</span>
+        </div>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html"     class="nav__link">Home</a>
+        <a href="services.html"  class="nav__link active">Services</a>
+        <a href="about.html"     class="nav__link">About</a>
+        <a href="contact.html"   class="nav__link nav__cta">Start a Conversation</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container page-header__content">
+      <div class="gold-line fade-up"></div>
+      <span class="eyebrow fade-up">What We Do</span>
+      <h1 class="fade-up fade-up-delay-1">AI Built Around<br>Your Mission</h1>
+      <p class="lead fade-up fade-up-delay-2">
+        From strategy to working AI systems to transformed teams, every engagement is built around your specific outcomes, your values, and your capacity to sustain what we build together.
+      </p>
+    </div>
+  </header>
+
+  <!-- WHO WE SERVE -->
+  <section class="section section--off-white">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+        <div>
+          <div class="gold-line fade-up"></div>
+          <span class="eyebrow fade-up">Who We Serve</span>
+          <h2 class="fade-up fade-up-delay-1" style="margin-top:16px;">Organizations Defined<br>by Their Purpose</h2>
+          <p class="lead fade-up fade-up-delay-2" style="margin-top:20px;">We work exclusively with mission-driven organizations: no corporate detours, no divided attention.</p>
+        </div>
+        <div>
+          <div style="display:flex;flex-direction:column;gap:16px;" class="fade-up">
+            <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px;background:var(--white);">
+              <div style="width:32px;height:32px;background:var(--navy-deep);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M2 8l4 4 8-8"/></svg>
+              </div>
+              <div>
+                <strong style="font-size:.9rem;color:var(--navy-dark);">Nonprofits &amp; Social Enterprises</strong>
+                <p style="font-size:.88rem;margin:4px 0 0;">Organizations serving communities, fighting poverty, or advancing justice, where AI can amplify impact without inflating overhead.</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px;background:var(--white);">
+              <div style="width:32px;height:32px;background:var(--navy-deep);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M2 8l4 4 8-8"/></svg>
+              </div>
+              <div>
+                <strong style="font-size:.9rem;color:var(--navy-dark);">Faith-Based Organizations</strong>
+                <p style="font-size:.88rem;margin:4px 0 0;">Churches, denominations, and parachurch ministries navigating AI with integrity, values alignment, and responsible governance.</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px;background:var(--white);">
+              <div style="width:32px;height:32px;background:var(--navy-deep);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M2 8l4 4 8-8"/></svg>
+              </div>
+              <div>
+                <strong style="font-size:.9rem;color:var(--navy-dark);">Foundations, NGOs, Startups &amp; Mission-Driven Enterprises</strong>
+                <p style="font-size:.88rem;margin:4px 0 0;">B Corps, grantmakers, purpose-driven companies, and mission-aligned startups where the work matters and the accountability is real.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES DETAIL -->
+  <section class="services-detail">
+    <div class="container">
+      <div class="services-detail__grid">
+
+        <!-- AI Strategy -->
+        <div class="service-detail" id="ai-strategy">
+          <div>
+            <div class="service-detail__number">01</div>
+            <h3 class="service-detail__label">AI Strategy &amp; Roadmap</h3>
+            <div class="gold-line" style="margin-bottom:0;"></div>
+          </div>
+          <div>
+            <p class="lead" style="margin-bottom:24px;">
+              Most organizations don't have an AI problem, they have an AI clarity problem. We help you cut through the noise and build a strategy grounded in your mission, your data, and your organizational reality.
+            </p>
+            <p style="margin-bottom:28px;">
+              We begin with a structured AI Readiness Assessment covering your people, data, processes, and technology. From that baseline we build a phased roadmap that prioritizes high-impact, low-risk applications of AI, so you build momentum, not regret. Every recommendation is tied to specific mission outcomes, not technology trends.
+            </p>
+            <div class="service-detail__outcomes">
+              <div class="eyebrow" style="margin-bottom:16px;">What You Walk Away With</div>
+              <div class="service-detail__outcome">AI Readiness Assessment across people, data, processes, and infrastructure</div>
+              <div class="service-detail__outcome">Prioritized AI use-case inventory mapped to mission impact</div>
+              <div class="service-detail__outcome">Phased implementation roadmap with realistic timelines</div>
+              <div class="service-detail__outcome">Vendor and tool evaluation framework, and we have no platform bias</div>
+              <div class="service-detail__outcome">Board-ready AI narrative for leadership and stakeholder communication</div>
+              <div class="service-detail__outcome">Governance and ethics guardrails built in from day one</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Implementation -->
+        <div class="service-detail" id="implementation">
+          <div>
+            <div class="service-detail__number">02</div>
+            <h3 class="service-detail__label">AI Implementation</h3>
+            <div class="gold-line" style="margin-bottom:0;"></div>
+          </div>
+          <div>
+            <p class="lead" style="margin-bottom:24px;">
+              Strategy without implementation is just a presentation. We build and deploy production-grade AI systems alongside your team, from proof of concept through to the systems your people actually rely on every day.
+            </p>
+            <p style="margin-bottom:28px;">
+              AI agents, automation pipelines, integrations, and custom models. We've rebuilt 40-year-old legacy platforms into AI-native products in months. We've shipped AI-enhanced nonprofit products featured at AWS re:Invent. We know what works in the real world, and we build it for yours.
+            </p>
+            <div class="service-detail__outcomes">
+              <div class="eyebrow" style="margin-bottom:16px;">What We Build</div>
+              <div class="service-detail__outcome">AI agents and intelligent automation for program and operations workflows</div>
+              <div class="service-detail__outcome">System integrations that eliminate manual data transfer and duplication</div>
+              <div class="service-detail__outcome">Custom AI/ML models trained on your data and mission context</div>
+              <div class="service-detail__outcome">Proof-of-concept sprints that de-risk larger investments</div>
+              <div class="service-detail__outcome">Production deployments with ongoing engineering support</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organizational Transformation -->
+        <div class="service-detail" id="transformation">
+          <div>
+            <div class="service-detail__number">03</div>
+            <h3 class="service-detail__label">Organizational Transformation</h3>
+            <div class="gold-line" style="margin-bottom:0;"></div>
+          </div>
+          <div>
+            <p class="lead" style="margin-bottom:24px;">
+              AI transformation isn't a technology project. It's a people project that happens to involve technology. The organizations that succeed with AI bring their people with them, and that takes intentional design.
+            </p>
+            <p style="margin-bottom:28px;">
+              We redesign roles, workflows, and team structures so that AI amplifies what your people are best at, and removes the work that drains them. We've rewritten job descriptions, rebuilt operating models, and transformed culture at scale. We don't hand you a report and leave. We stay until the change holds.
+            </p>
+            <div class="service-detail__outcomes">
+              <div class="eyebrow" style="margin-bottom:16px;">What This Involves</div>
+              <div class="service-detail__outcome">AI-DLC (AI-enabled development and delivery) shaped by enterprise goals and measures</div>
+              <div class="service-detail__outcome">Role redesign and job description rewriting for an AI-enabled team</div>
+              <div class="service-detail__outcome">Product-centric operating model design</div>
+              <div class="service-detail__outcome">Change management planning and stakeholder alignment</div>
+              <div class="service-detail__outcome">AI literacy programs for staff at every level</div>
+              <div class="service-detail__outcome">Leadership coaching for executives navigating the AI transition</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fractional CPTO -->
+        <div class="service-detail" id="fractional">
+          <div>
+            <div class="service-detail__number">04</div>
+            <h3 class="service-detail__label">Fractional CPTO / CTO</h3>
+            <div class="gold-line" style="margin-bottom:0;"></div>
+          </div>
+          <div>
+            <p class="lead" style="margin-bottom:24px;">
+              Not every organization is ready to hire a full-time Chief Technology Officer, but every organization navigating AI needs senior technology leadership. As a fractional or interim CPTO/CTO, a Mission Forge principal provides the strategic direction, team leadership, and executive presence your organization needs right now.
+            </p>
+            <p style="margin-bottom:28px;">
+              This is not a consulting report delivered at the end of an engagement. It is embedded, collaborative leadership, present in your leadership meetings, shaping your decisions, accountable for outcomes alongside your team. Our principals have held this role across MedTech, global nonprofits, and tech-driven enterprises.
+            </p>
+            <div class="service-detail__outcomes">
+              <div class="eyebrow" style="margin-bottom:16px;">What This Looks Like</div>
+              <div class="service-detail__outcome">Defined weekly or monthly engagement structure scaled to your needs</div>
+              <div class="service-detail__outcome">Participation in executive leadership and board meetings</div>
+              <div class="service-detail__outcome">Technology and AI strategy ownership</div>
+              <div class="service-detail__outcome">Team mentorship and engineering leadership</div>
+              <div class="service-detail__outcome">Vendor negotiation and platform evaluation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Responsible AI -->
+        <div class="service-detail" id="governance">
+          <div>
+            <div class="service-detail__number">05</div>
+            <h3 class="service-detail__label">Responsible AI &amp; Governance</h3>
+            <div class="gold-line" style="margin-bottom:0;"></div>
+          </div>
+          <div>
+            <p class="lead" style="margin-bottom:24px;">
+              Mission-driven organizations have a unique responsibility and a unique opportunity to model what values-aligned AI looks like for the rest of the world. We help you build that foundation before the rest of the sector catches up.
+            </p>
+            <p style="margin-bottom:28px;">
+              76% of nonprofits have no formal AI policy. 65% of their employees use AI at work without guidance. The cost of getting this wrong averages $650K per incident. We build the governance frameworks, policies, and culture needed to keep your people protected and your mission intact.
+            </p>
+            <div class="service-detail__outcomes">
+              <div class="eyebrow" style="margin-bottom:16px;">What We Build</div>
+              <div class="service-detail__outcome">Organizational AI ethics policy aligned to your values and mission</div>
+              <div class="service-detail__outcome">Data stewardship and privacy framework design</div>
+              <div class="service-detail__outcome">Responsible AI use-case evaluation criteria</div>
+              <div class="service-detail__outcome">Staff training and AI literacy programs</div>
+              <div class="service-detail__outcome">Ongoing AI governance advisory and policy updates</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Board Advisory -->
+        <div class="service-detail" id="advisory">
+          <div>
+            <div class="service-detail__number">06</div>
+            <h3 class="service-detail__label">Board &amp; Executive Advisory</h3>
+            <div class="gold-line" style="margin-bottom:0;"></div>
+          </div>
+          <div>
+            <p class="lead" style="margin-bottom:24px;">
+              Technology decisions are now board-level decisions, especially when AI is involved. We provide your board and leadership team with an informed, independent voice to navigate these decisions with clarity and confidence.
+            </p>
+            <p style="margin-bottom:28px;">
+              Drawing on experience advising at the executive and board level across nonprofits, defense agencies, and global enterprises, Mission Forge brings an informed perspective that helps your governance structure keep pace with a rapidly changing landscape.
+            </p>
+            <div class="service-detail__outcomes">
+              <div class="eyebrow" style="margin-bottom:16px;">What We Provide</div>
+              <div class="service-detail__outcome">AI strategy briefings tailored for board members</div>
+              <div class="service-detail__outcome">AI governance framework design and oversight guidance</div>
+              <div class="service-detail__outcome">Digital risk assessment and board-level decision frameworks</div>
+              <div class="service-detail__outcome">Technology investment evaluation and vendor assessment</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="text-center mb-64">
+        <div class="gold-line gold-line--center fade-up"></div>
+        <span class="eyebrow fade-up">How We Work</span>
+        <h2 class="text-white fade-up fade-up-delay-1" style="margin-top:16px;">A Simple Process.<br>No Cookie-Cutter Frameworks.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:rgba(255,255,255,0.05);">
+        <div style="background:var(--navy-dark);padding:36px 28px;" class="fade-up">
+          <div style="font-family:var(--font-serif);font-size:2.8rem;color:var(--gold);opacity:.4;line-height:1;margin-bottom:20px;">01</div>
+          <h4 style="color:var(--white);margin-bottom:10px;font-size:1rem;">Discover</h4>
+          <p style="font-size:.85rem;">We learn your mission, goals, constraints, and current capabilities. No assumptions, no templates.</p>
+        </div>
+        <div style="background:var(--navy-dark);padding:36px 28px;" class="fade-up fade-up-delay-1">
+          <div style="font-family:var(--font-serif);font-size:2.8rem;color:var(--gold);opacity:.4;line-height:1;margin-bottom:20px;">02</div>
+          <h4 style="color:var(--white);margin-bottom:10px;font-size:1rem;">Assess</h4>
+          <p style="font-size:.85rem;">We evaluate AI readiness across your people, data, processes, and technology to surface what's real.</p>
+        </div>
+        <div style="background:var(--navy-dark);padding:36px 28px;" class="fade-up fade-up-delay-2">
+          <div style="font-family:var(--font-serif);font-size:2.8rem;color:var(--gold);opacity:.4;line-height:1;margin-bottom:20px;">03</div>
+          <h4 style="color:var(--white);margin-bottom:10px;font-size:1rem;">Strategize</h4>
+          <p style="font-size:.85rem;">A tailored AI roadmap with clear priorities, ethical guardrails, and realistic timelines you can actually execute.</p>
+        </div>
+        <div style="background:var(--navy-dark);padding:36px 28px;" class="fade-up fade-up-delay-3">
+          <div style="font-family:var(--font-serif);font-size:2.8rem;color:var(--gold);opacity:.4;line-height:1;margin-bottom:20px;">04</div>
+          <h4 style="color:var(--white);margin-bottom:10px;font-size:1rem;">Implement</h4>
+          <p style="font-size:.85rem;">We build and deploy AI alongside your team, from pilots to full production systems that your people actually use.</p>
+        </div>
+        <div style="background:var(--navy-dark);padding:36px 28px;" class="fade-up" style="transition-delay:0.4s">
+          <div style="font-family:var(--font-serif);font-size:2.8rem;color:var(--gold);opacity:.4;line-height:1;margin-bottom:20px;">05</div>
+          <h4 style="color:var(--white);margin-bottom:10px;font-size:1rem;">Transform</h4>
+          <p style="font-size:.85rem;">We redesign workflows and equip your people for sustained AI-enabled success. The change lasts beyond us.</p>
+        </div>
+      </div>
+
+      <!-- Engagement Models -->
+      <div style="margin-top:48px;padding:40px;background:rgba(196,154,60,0.06);border:1px solid rgba(196,154,60,0.15);" class="fade-up">
+        <div class="text-center" style="margin-bottom:32px;">
+          <div class="eyebrow" style="margin-bottom:8px;">Flexible Engagement Models</div>
+          <p style="color:rgba(255,255,255,.65);font-size:.95rem;">Built around your outcomes, not our hourly rate.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+          <div style="text-align:center;padding:20px;">
+            <div style="font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Hourly Advisory</div>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.55);">Reviews, on-demand sprints, specific questions</p>
+          </div>
+          <div style="text-align:center;padding:20px;">
+            <div style="font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Fixed Price</div>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.55);">Defined scope, clear deliverables, predictable cost</p>
+          </div>
+          <div style="text-align:center;padding:20px;">
+            <div style="font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Co-Ownership</div>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.55);">Equity or revenue share arrangements for the right fit</p>
+          </div>
+          <div style="text-align:center;padding:20px;">
+            <div style="font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Custom</div>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.55);">Built around your specific mission and constraints</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY CALLOUT -->
+  <section class="section section--off-white">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+        <div>
+          <div class="gold-line fade-up"></div>
+          <span class="eyebrow fade-up">Results in the Real World</span>
+          <h2 class="fade-up fade-up-delay-1" style="margin-top:16px;margin-bottom:24px;">From Fragile Legacy<br>to Market Leader in Months</h2>
+          <p class="fade-up fade-up-delay-2">
+            A 40-year-old codebase: fragile, bug-ridden, hemorrhaging customers. Speed to market was measured in quarters. Every release was a risk. We rebuilt it with AI at its core: AI-assisted coding, automated testing, DevOps pipelines, and AI-aided product development. We transformed every role, rewriting job descriptions to unlock the full potential of AI for every person on the team.
+          </p>
+          <p class="fade-up" style="margin-top:16px;font-size:.88rem;font-style:italic;color:var(--text-secondary);">"Your new features save us 4 to 5 hours per day, per person.", Medical Practitioners &amp; End Users</p>
+        </div>
+        <div class="fade-up fade-up-delay-1">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="padding:32px 28px;background:var(--navy-deep);text-align:center;">
+              <div style="font-family:var(--font-serif);font-size:3rem;color:var(--gold);line-height:1;margin-bottom:8px;">300%</div>
+              <div style="font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);">Sales Growth in 5 Months</div>
+            </div>
+            <div style="padding:32px 28px;background:var(--navy-dark);text-align:center;">
+              <div style="font-family:var(--font-serif);font-size:3rem;color:var(--gold);line-height:1;margin-bottom:8px;">-80%</div>
+              <div style="font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);">Defects: Quality Transformed</div>
+            </div>
+            <div style="padding:32px 28px;background:var(--navy-dark);text-align:center;">
+              <div style="font-family:var(--font-serif);font-size:3rem;color:var(--gold);line-height:1;margin-bottom:8px;">2&times;</div>
+              <div style="font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);">NPS Score Doubled</div>
+            </div>
+            <div style="padding:32px 28px;background:var(--navy-deep);text-align:center;">
+              <div style="font-family:var(--font-serif);font-size:3rem;color:var(--gold);line-height:1;margin-bottom:8px;">#1</div>
+              <div style="font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);">First to Market: Multiple Features</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__content">
+        <div class="gold-line gold-line--center fade-up"></div>
+        <span class="eyebrow fade-up">Ready to Begin?</span>
+        <h2 class="fade-up fade-up-delay-1" style="margin-top: 16px;">Start with a Conversation</h2>
+        <p class="lead fade-up fade-up-delay-2">No pitch, no pressure. Just an honest exchange about where AI can move the needle for your mission.</p>
+        <div class="fade-up fade-up-delay-3">
+          <a href="contact.html" class="btn btn--gold btn--arrow">Book a Free Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand-name">Mission Forge AI</div>
+          <p class="footer__brand-desc">AI strategy and implementation for organizations with a mission to make the world better, safer, and more just — across every sector.</p>
+          <a href="contact.html" class="footer__link">Start a Conversation</a>
+        </div>
+        <div>
+          <div class="footer__heading">Navigate</div>
+          <div class="footer__links">
+            <a href="index.html"    class="footer__link">Home</a>
+            <a href="services.html" class="footer__link">Services</a>
+            <a href="about.html"    class="footer__link">About</a>
+            <a href="contact.html"  class="footer__link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Services</div>
+          <div class="footer__links">
+            <a href="services.html#ai-strategy"    class="footer__link">AI Strategy</a>
+            <a href="services.html#implementation" class="footer__link">AI Implementation</a>
+            <a href="services.html#transformation" class="footer__link">Org Transformation</a>
+            <a href="services.html#fractional"     class="footer__link">Fractional CPTO/CTO</a>
+            <a href="services.html#governance"     class="footer__link">Responsible AI</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Connect</div>
+          <div class="footer__links">
+            <a href="contact.html" class="footer__link">Contact Us</a>
+            <a href="https://www.linkedin.com/company/mission-forge-ai/" target="_blank" rel="noopener" class="footer__link">Company LinkedIn</a>
+            <a href="contact.html" class="footer__link">Book a Discovery Call</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 Mission Forge AI. All rights reserved.</div>
+        <div class="footer__legal-links">
+          <a href="privacy.html" class="footer__legal-link">Privacy</a>
+          <a href="#" class="footer__legal-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
