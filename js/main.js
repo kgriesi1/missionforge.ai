@@ -197,3 +197,148 @@
     dismiss('essential');
   });
 })();
+
+// ============================================================
+// AI READINESS ASSESSMENT
+// ============================================================
+(function () {
+  var card = document.getElementById('assessmentCard');
+  if (!card) return;
+
+  var questions = [
+    {
+      q: "How would you describe your organization's current AI strategy?",
+      opts: [
+        "We don't have one yet",
+        "We have ideas but nothing formal",
+        "We have a clear, documented AI strategy"
+      ]
+    },
+    {
+      q: "How would you describe your data infrastructure?",
+      opts: [
+        "Fragmented — siloed systems, inconsistent quality",
+        "Centralized but not well-organized or governed",
+        "Well-structured, accessible, and documented"
+      ]
+    },
+    {
+      q: "How aligned is your leadership team on AI priorities?",
+      opts: [
+        "AI is on the radar but not yet a priority",
+        "Leadership is interested but not fully committed",
+        "Leadership is actively driving AI adoption"
+      ]
+    },
+    {
+      q: "Have you attempted AI initiatives before?",
+      opts: [
+        "Not yet — we're exploring for the first time",
+        "Yes, with limited or mixed results",
+        "Yes, with successes we're ready to scale"
+      ]
+    },
+    {
+      q: "What is your biggest barrier to AI adoption?",
+      opts: [
+        "Not knowing where to start",
+        "Data quality, infrastructure, or skills gaps",
+        "Scaling pilots and managing organizational change"
+      ]
+    }
+  ];
+
+  var tiers = [
+    {
+      name: "Emerging",
+      min: 5, max: 8,
+      msg: "Your organization is at the starting line — and that's exactly where the most important decisions get made. A focused first engagement can build the right foundation and prevent the most costly mistakes."
+    },
+    {
+      name: "Building",
+      min: 9, max: 12,
+      msg: "You have momentum and a foundation to build on. With the right strategy and the right team, you can turn that foundation into measurable outcomes — faster than you might expect."
+    },
+    {
+      name: "Leading",
+      min: 13, max: 15,
+      msg: "You are positioned to scale. The question is whether your current approach will take you there. Let's find the gaps and close them together."
+    }
+  ];
+
+  var current = 0;
+  var answers = [];
+  var track = document.getElementById('assessTrack');
+  var body = document.getElementById('assessBody');
+
+  function setProgress(pct) {
+    track.style.width = pct + '%';
+  }
+
+  function renderQ(index) {
+    setProgress(Math.round((index / questions.length) * 100));
+    var q = questions[index];
+    var isLast = index === questions.length - 1;
+    body.innerHTML =
+      '<div class="assessment-counter">Question ' + (index + 1) + ' of ' + questions.length + '</div>' +
+      '<div class="assessment-q">' + q.q + '</div>' +
+      '<div class="assessment-opts">' +
+        q.opts.map(function (opt, i) {
+          return '<button class="assessment-opt" data-v="' + (i + 1) + '">' + opt + '</button>';
+        }).join('') +
+      '</div>' +
+      '<div class="assessment-nav">' +
+        '<button class="btn btn--gold assessment-next" id="assessNext" disabled>' +
+          (isLast ? 'See My Results' : 'Next') +
+        '</button>' +
+      '</div>';
+
+    var selected = null;
+    body.querySelectorAll('.assessment-opt').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        body.querySelectorAll('.assessment-opt').forEach(function (b) { b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        selected = parseInt(btn.getAttribute('data-v'));
+        var next = document.getElementById('assessNext');
+        next.disabled = false;
+        next.classList.add('ready');
+      });
+    });
+
+    document.getElementById('assessNext').addEventListener('click', function () {
+      if (selected === null) return;
+      answers[index] = selected;
+      if (index + 1 < questions.length) {
+        current++;
+        renderQ(current);
+      } else {
+        showResult();
+      }
+    });
+  }
+
+  function showResult() {
+    setProgress(100);
+    var total = answers.reduce(function (a, b) { return a + b; }, 0);
+    var tier = tiers.find(function (t) { return total >= t.min && total <= t.max; }) || tiers[0];
+    body.innerHTML =
+      '<div class="assessment-result-inner">' +
+        '<div class="assessment-tier-label">Your AI Readiness Level</div>' +
+        '<div class="assessment-tier-name">' + tier.name + '</div>' +
+        '<p class="assessment-tier-msg">' + tier.msg + '</p>' +
+        '<div class="assessment-ctas">' +
+          '<a href="contact.html" class="btn btn--gold btn--arrow">Book a Free Discovery Call</a>' +
+          '<button class="assessment-retake" id="retakeBtn">Retake the Assessment</button>' +
+        '</div>' +
+      '</div>';
+
+    document.getElementById('retakeBtn').addEventListener('click', function () {
+      current = 0;
+      answers = [];
+      setProgress(0);
+      renderQ(0);
+    });
+  }
+
+  renderQ(0);
+})();

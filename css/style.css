@@ -1070,7 +1070,7 @@ p  { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
 /* Testimonials all page */
 .all-testimonials {
   padding: 80px 0 120px;
-  background: var(--off-white);
+  background: var(--navy-deep);
 }
 
 .all-testimonials__grid {
@@ -1442,4 +1442,228 @@ p  { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
     flex: 1;
     text-align: center;
   }
+}
+
+/* ============================================================
+   AI FAILURE TABLE
+   ============================================================ */
+.failure-grid { border: 1px solid var(--light-gray); }
+.failure-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--light-gray);
+}
+.failure-row:last-child { border-bottom: none; }
+.failure-cell { padding: 22px 28px; }
+.failure-cell--problem {
+  background: var(--off-white);
+  border-right: 1px solid var(--light-gray);
+}
+.failure-cell--solution { background: var(--white); }
+.failure-cell__label {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.failure-cell__label--problem { color: var(--text-secondary); }
+.failure-cell__label--solution { color: var(--gold); }
+.failure-cell__text {
+  font-size: .88rem;
+  color: var(--navy-dark);
+  font-weight: 500;
+  line-height: 1.55;
+}
+.failure-cell--solution .failure-cell__text {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* ============================================================
+   COMPARISON TABLE
+   ============================================================ */
+.comp-wrap { overflow-x: auto; }
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--light-gray);
+  font-size: .83rem;
+  min-width: 640px;
+}
+.comp-table th {
+  padding: 16px 18px;
+  text-align: center;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-left: 1px solid var(--light-gray);
+  line-height: 1.4;
+}
+.comp-table th:first-child {
+  text-align: left;
+  border-left: none;
+  background: var(--white);
+  color: transparent;
+}
+.comp-table .th--other {
+  background: var(--off-white);
+  color: var(--navy-muted);
+}
+.comp-table .th--mf {
+  background: var(--navy-deep);
+  color: var(--gold);
+}
+.comp-table td {
+  padding: 14px 18px;
+  border-top: 1px solid var(--light-gray);
+  border-left: 1px solid var(--light-gray);
+  vertical-align: middle;
+  line-height: 1.45;
+}
+.comp-table td:first-child {
+  font-weight: 600;
+  color: var(--navy-dark);
+  font-size: .82rem;
+  background: var(--off-white);
+  border-left: none;
+}
+.comp-table .td--other {
+  color: var(--text-secondary);
+  font-size: .78rem;
+  text-align: center;
+}
+.comp-table .td--mf {
+  background: rgba(196,154,60,0.05);
+  color: var(--navy-dark);
+  font-weight: 600;
+  font-size: .82rem;
+  text-align: center;
+}
+.comp-check { color: var(--gold); font-size: 1rem; }
+
+/* ============================================================
+   AI READINESS ASSESSMENT
+   ============================================================ */
+.assessment-wrap { max-width: 680px; margin: 0 auto; }
+.assessment-card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+}
+.assessment-track { height: 3px; background: var(--light-gray); }
+.assessment-track__fill {
+  height: 3px;
+  background: var(--gold);
+  width: 0%;
+  transition: width .5s ease;
+}
+.assessment-inner { padding: 44px 52px; }
+.assessment-counter {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+.assessment-q {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--navy-dark);
+  margin-bottom: 26px;
+  line-height: 1.45;
+}
+.assessment-opts { display: flex; flex-direction: column; gap: 9px; }
+.assessment-opt {
+  padding: 13px 18px;
+  background: var(--white);
+  border: 1.5px solid var(--light-gray);
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: .88rem;
+  color: var(--navy-dark);
+  transition: border-color .2s, background .2s;
+  line-height: 1.4;
+}
+.assessment-opt:hover { border-color: var(--gold); background: rgba(196,154,60,0.04); }
+.assessment-opt.selected { border-color: var(--gold); background: rgba(196,154,60,0.08); font-weight: 600; }
+.assessment-nav { display: flex; justify-content: flex-end; margin-top: 22px; }
+.assessment-next { opacity: .38; pointer-events: none; }
+.assessment-next.ready { opacity: 1; pointer-events: auto; }
+.assessment-result-inner { text-align: center; padding: 52px; }
+.assessment-tier-label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.assessment-tier-name {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--navy-dark);
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+.assessment-tier-msg {
+  font-size: .95rem;
+  color: var(--text-secondary);
+  max-width: 460px;
+  margin: 0 auto 32px;
+  line-height: 1.75;
+}
+.assessment-ctas { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.assessment-retake {
+  font-size: .82rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-family: var(--font-sans);
+}
+.assessment-retake:hover { color: var(--navy-dark); }
+
+/* ============================================================
+   PULL QUOTE TESTIMONIALS
+   ============================================================ */
+.pull-quotes { display: flex; flex-direction: column; }
+.pull-quote {
+  padding: 56px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.pull-quote:last-child { border-bottom: none; }
+.pull-quote__text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.5vw, 2.1rem);
+  font-style: italic;
+  color: rgba(255,255,255,.92);
+  max-width: 680px;
+  line-height: 1.45;
+  margin-bottom: 20px;
+}
+.pull-quote__attr {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================================
+   RESPONSIVE — NEW SECTIONS
+   ============================================================ */
+@media (max-width: 768px) {
+  .failure-row { grid-template-columns: 1fr; }
+  .failure-cell--problem { border-right: none; border-bottom: 1px solid var(--light-gray); }
+  .assessment-inner { padding: 28px 24px; }
+  .assessment-result-inner { padding: 32px 24px; }
+  .pull-quote { padding: 36px 0; }
 }
