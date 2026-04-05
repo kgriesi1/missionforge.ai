@@ -133,7 +133,7 @@
     const body    = encodeURIComponent(
       `Name: ${data.name || ''}\nOrganization: ${data.organization || ''}\nEmail: ${data.email || ''}\nPhone: ${data.phone || ''}\n\nMessage:\n${data.message || ''}`
     );
-    window.location.href = `mailto:ken@missionforge.ai?subject=${subject}&body=${body}`;
+    window.location.href = 'contact.html';
   }
 })();
 
@@ -312,22 +312,48 @@
         current++;
         renderQ(current);
       } else {
-        showResult();
+        showEmailCapture();
       }
     });
   }
 
-  function showResult() {
+  function showEmailCapture() {
     setProgress(100);
+    body.innerHTML =
+      '<div class="assessment-result-inner">' +
+        '<div class="assessment-tier-label">Your Results Are Ready</div>' +
+        '<p class="assessment-tier-msg" style="margin-bottom:24px;">Enter your email to see your personalized AI readiness score and recommended next steps.</p>' +
+        '<div style="margin-bottom:12px;">' +
+          '<input type="email" id="assessEmail" placeholder="your@email.com" style="width:100%;padding:13px 16px;border:1.5px solid #ddd;border-radius:3px;font-size:.95rem;font-family:inherit;outline:none;box-sizing:border-box;" />' +
+        '</div>' +
+        '<button class="btn btn--gold assessment-next ready" id="seeResultsBtn" style="width:100%;justify-content:center;pointer-events:auto;opacity:1;">See My Results</button>' +
+        '<p style="font-size:.75rem;color:var(--text-secondary);margin-top:12px;">No spam. Just your score and a path forward.</p>' +
+      '</div>';
+
+    document.getElementById('seeResultsBtn').addEventListener('click', function () {
+      var emailInput = document.getElementById('assessEmail');
+      var email = emailInput.value.trim();
+      if (!email || email.indexOf('@') === -1) {
+        emailInput.style.borderColor = '#c0392b';
+        emailInput.focus();
+        return;
+      }
+      emailInput.style.borderColor = '#ddd';
+      showResult(email);
+    });
+  }
+
+  function showResult(email) {
     var total = answers.reduce(function (a, b) { return a + b; }, 0);
     var tier = tiers.find(function (t) { return total >= t.min && total <= t.max; }) || tiers[0];
+    var contactHref = 'contact.html?score=' + encodeURIComponent(tier.name) + (email ? '&email=' + encodeURIComponent(email) : '');
     body.innerHTML =
       '<div class="assessment-result-inner">' +
         '<div class="assessment-tier-label">Your AI Readiness Level</div>' +
         '<div class="assessment-tier-name">' + tier.name + '</div>' +
         '<p class="assessment-tier-msg">' + tier.msg + '</p>' +
         '<div class="assessment-ctas">' +
-          '<a href="contact.html" class="btn btn--gold btn--arrow">Book a Free Discovery Call</a>' +
+          '<a href="' + contactHref + '" class="btn btn--gold btn--arrow">Start the Conversation</a>' +
           '<button class="assessment-retake" id="retakeBtn">Retake the Assessment</button>' +
         '</div>' +
       '</div>';
