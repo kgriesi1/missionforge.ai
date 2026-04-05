@@ -123,7 +123,7 @@
       line-height: 1.6;
       margin-top: 16px;
     `;
-    msg.innerHTML = `<strong>Thank you for reaching out.</strong><br>Ken will be in touch with you shortly.`;
+    msg.innerHTML = `<strong>Thank you for reaching out.</strong><br>We will be in touch with you shortly.`;
     form.after(msg);
     form.style.display = 'none';
   }
