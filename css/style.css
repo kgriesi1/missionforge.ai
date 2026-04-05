@@ -1666,4 +1666,9 @@ p  { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
   .assessment-inner { padding: 28px 24px; }
   .assessment-result-inner { padding: 32px 24px; }
   .pull-quote { padding: 36px 0; }
+  .rg-2col,
+  .rg-3col {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
 }
