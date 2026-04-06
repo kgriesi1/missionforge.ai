@@ -217,7 +217,7 @@
     {
       q: "How would you describe your data infrastructure?",
       opts: [
-        "Fragmented — siloed systems, inconsistent quality",
+        "Fragmented: siloed systems, inconsistent quality",
         "Centralized but not well-organized or governed",
         "Well-structured, accessible, and documented"
       ]
@@ -233,7 +233,7 @@
     {
       q: "Have you attempted AI initiatives before?",
       opts: [
-        "Not yet — we're exploring for the first time",
+        "Not yet, we're exploring for the first time",
         "Yes, with limited or mixed results",
         "Yes, with successes we're ready to scale"
       ]
@@ -252,12 +252,12 @@
     {
       name: "Emerging",
       min: 5, max: 8,
-      msg: "Your organization is at the starting line — and that's exactly where the most important decisions get made. A focused first engagement can build the right foundation and prevent the most costly mistakes."
+      msg: "Your organization is at the starting line, and that's exactly where the most important decisions get made. A focused first engagement can build the right foundation and prevent the most costly mistakes."
     },
     {
       name: "Building",
       min: 9, max: 12,
-      msg: "You have momentum and a foundation to build on. With the right strategy and the right team, you can turn that foundation into measurable outcomes — faster than you might expect."
+      msg: "You have momentum and a foundation to build on. With the right strategy and the right team, you can turn that foundation into measurable outcomes, faster than you might expect."
     },
     {
       name: "Leading",
