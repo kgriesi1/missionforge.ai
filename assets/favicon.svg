@@ -1,7 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#09172E"/>
-  <!-- Hexagonal forge mark -->
-  <polygon points="32,8 56,21 56,43 32,56 8,43 8,21" fill="none" stroke="#C49A3C" stroke-width="2.5"/>
-  <!-- MF letterform -->
-  <text x="32" y="40" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#C49A3C" text-anchor="middle">MF</text>
+  <rect width="64" height="64" fill="#09172E" rx="8"/>
+
+  <!-- ANVIL: bottom zone, wide grounded silhouette -->
+  <path d="M 9,40 L 52,40 L 62,43.5 L 52,47
+           C 50,49 48,50 46,51 L 46,53
+           C 47,54 48,55 48,56
+           L 12,56
+           C 12,55 13,54 14,53 L 14,51
+           C 13,50 11,49 9,47 Z"
+        fill="#C49A3C"/>
+
+  <!-- HAMMER: upper-left zone, T-shape pointing at impact -->
+  <g transform="translate(18, 22) rotate(-40)">
+    <rect x="-2"  y="-16" width="4"  height="14" rx="2"   fill="#ffffff"/>
+    <rect x="-9"  y="-2"  width="18" height="7"  rx="1.5" fill="#ffffff"/>
+  </g>
+
+  <!-- SPARKS: upper-right zone only, no overlap with hammer -->
+  <polygon points="28.6,42.4 27.4,37.6 62,32"  fill="#FFD700"/>
+  <polygon points="29.6,41.9 26.4,38.1 58,14"  fill="#FFD700"/>
+  <polygon points="29.8,40.8 26.2,39.2 44,5"   fill="#FFD700"/>
+
+  <!-- IMPACT: connects all three — white-hot focal point on anvil surface -->
+  <circle cx="28" cy="40" r="3.5" fill="#ffffff"/>
 </svg>
