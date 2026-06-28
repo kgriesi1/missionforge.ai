@@ -371,12 +371,11 @@
       var params = new URLSearchParams(window.location.search);
       var token = (params.get("c") || "").trim();
 
-      if (token) {
-        tokenField.value = token;
-        survey.style.display = "block";
-      } else {
-        noinvite.style.display = "block";
-      }
+      // The form shows for anyone with the link. A ?c= code is optional —
+      // if present it's saved with the response so you can auto-tag who it's
+      // from; if absent, the required name/email still identify the client.
+      tokenField.value = token;
+      survey.style.display = "block";
 
       var isFormspree = SUBMIT_ENDPOINT.indexOf("formspree.io") !== -1;
 
