@@ -45,7 +45,7 @@
       <span class="eyebrow fade-up">By Invitation</span>
       <h1 class="fade-up fade-up-delay-1">Client Feedback</h1>
       <p class="lead fade-up fade-up-delay-2">
-        Thank you for the work we did together. Your honest reflection helps us improve and, where you allow it, helps others understand what this kind of work can do. It takes about five minutes, and you control how anything you write is used.
+        Thank you for the work we did together. Your candid feedback helps us improve and, where you allow it, helps other mission-driven organizations picture what's possible. The survey takes about five minutes, and you stay in control of whether and how anything you share is used.
       </p>
     </div>
   </header>
@@ -68,27 +68,27 @@
 
           <!-- SECTION 1 -->
           <div class="eyebrow" style="margin-bottom:6px;">About This Engagement</div>
-          <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">A little context so we can connect your feedback to the right work. All optional.</p>
+          <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">A little context so we can connect your feedback to the right work.</p>
 
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="name">Your Name</label>
-              <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" />
+              <label class="form-label" for="name">Your Name *</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
             </div>
             <div class="form-group">
-              <label class="form-label" for="title">Your Title / Role</label>
-              <input class="form-input" type="text" id="title" name="title" placeholder="Chief Operating Officer" />
+              <label class="form-label" for="title">Your Title / Role *</label>
+              <input class="form-input" type="text" id="title" name="title" placeholder="Chief Operating Officer" required />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="organization">Organization</label>
-              <input class="form-input" type="text" id="organization" name="organization" placeholder="Your organization" />
+              <label class="form-label" for="organization">Organization *</label>
+              <input class="form-input" type="text" id="organization" name="organization" placeholder="Your organization" required />
             </div>
             <div class="form-group">
-              <label class="form-label" for="email">Email (only if open to follow-up)</label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="jane@example.org" />
+              <label class="form-label" for="email">Email *</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="jane@example.org" required />
             </div>
           </div>
 
@@ -99,7 +99,7 @@
 
           <!-- SECTION 2 -->
           <div class="eyebrow" style="margin:40px 0 6px;">Your Experience</div>
-          <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">There are no wrong answers. Plain, specific language is more useful to us than polish.</p>
+          <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">Think back over the engagement and what stood out to you. Specific, plain language helps more than polish, and there are no wrong answers.</p>
 
           <div class="form-group">
             <label class="form-label">Overall, how would you rate your experience? *</label>
@@ -192,9 +192,9 @@
           <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">No pressure here — just helps us understand how we can be useful over time.</p>
 
           <div class="form-group">
-            <label class="form-label">Would you work with Mission Forge again?</label>
+            <label class="form-label">Would you work with Mission Forge again? *</label>
             <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
-              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Definitely" style="accent-color:var(--gold);margin-top:3px;" /> Definitely</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Definitely" required style="accent-color:var(--gold);margin-top:3px;" /> Definitely</label>
               <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Probably" style="accent-color:var(--gold);margin-top:3px;" /> Probably</label>
               <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Unsure" style="accent-color:var(--gold);margin-top:3px;" /> Unsure</label>
               <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Probably not" style="accent-color:var(--gold);margin-top:3px;" /> Probably not</label>
@@ -202,9 +202,9 @@
           </div>
 
           <div class="form-group" style="margin-top:24px;">
-            <label class="form-label">Would you welcome us staying in touch about work down the road?</label>
+            <label class="form-label">Would you welcome us staying in touch about work down the road? *</label>
             <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
-              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="keep_in_touch" value="Yes, I'd welcome that" style="accent-color:var(--gold);margin-top:3px;" /> Yes, I'd welcome that</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="keep_in_touch" value="Yes, I'd welcome that" required style="accent-color:var(--gold);margin-top:3px;" /> Yes, I'd welcome that</label>
               <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="keep_in_touch" value="Maybe later" style="accent-color:var(--gold);margin-top:3px;" /> Maybe later</label>
               <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="keep_in_touch" value="No thank you" style="accent-color:var(--gold);margin-top:3px;" /> No thank you</label>
             </div>
