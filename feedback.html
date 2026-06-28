@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Client Feedback, Mission Forge AI</title>
+  <title>Your Feedback, Mission Forge AI</title>
   <meta name="description" content="By-invitation client feedback for Mission Forge AI." />
   <!-- Keep this page out of search engines and out of nav/footer. It is shared by invitation only. -->
   <meta name="robots" content="noindex, nofollow" />
@@ -43,7 +43,7 @@
     <div class="container page-header__content">
       <div class="gold-line fade-up"></div>
       <span class="eyebrow fade-up">By Invitation</span>
-      <h1 class="fade-up fade-up-delay-1">Client Feedback</h1>
+      <h1 class="fade-up fade-up-delay-1">Your Feedback</h1>
       <p class="lead fade-up fade-up-delay-2">
         Thank you for the work we did together. Your candid feedback helps us improve and, where you allow it, helps other mission-driven organizations picture what's possible. The survey takes about five minutes, and you stay in control of whether and how anything you share is used.
       </p>
@@ -66,8 +66,17 @@
       <div id="survey" style="display:none;">
         <form class="contact-form" id="surveyForm">
 
+          <!-- RESPONDENT TYPE -->
+          <div class="form-group">
+            <label class="form-label">I'm responding as *</label>
+            <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:8px;">
+              <label style="display:flex;gap:8px;align-items:center;font-size:.95rem;cursor:pointer;"><input type="radio" name="respondent_type" value="Client" required style="accent-color:var(--gold);" /> A client</label>
+              <label style="display:flex;gap:8px;align-items:center;font-size:.95rem;cursor:pointer;"><input type="radio" name="respondent_type" value="Partner" style="accent-color:var(--gold);" /> A partner / collaborator</label>
+            </div>
+          </div>
+
           <!-- SECTION 1 -->
-          <div class="eyebrow" style="margin-bottom:6px;">About This Engagement</div>
+          <div class="eyebrow" style="margin:32px 0 6px;">About This Engagement</div>
           <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">A little context so we can connect your feedback to the right work.</p>
 
           <div class="form-row">
@@ -93,7 +102,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="engagement">Which engagement or project is this about?</label>
+            <label class="form-label" for="engagement" data-client="Which engagement or project is this about?" data-partner="Which project did you collaborate with us on?">Which engagement or project is this about?</label>
             <input class="form-input" type="text" id="engagement" name="engagement" placeholder="e.g., AI strategy roadmap, spring 2026" />
           </div>
 
@@ -133,29 +142,29 @@
           </div>
 
           <div class="form-group" style="margin-top:24px;">
-            <label class="form-label" for="before_situation">Before the engagement, what was the situation or problem you needed to solve?</label>
+            <label class="form-label" for="before_situation" data-client="Before the engagement, what was the situation or problem you needed to solve?" data-partner="Going into the project, what was the situation or goal?">Before the engagement, what was the situation or problem you needed to solve?</label>
             <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">A sentence or two on where things stood and what wasn't working.</p>
             <textarea class="form-textarea" id="before_situation" name="before_situation" placeholder="Example: We believed AI could strengthen our programs, but we had no strategy, no governance, and a team unsure where to start."></textarea>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="delivered_changed">What did we deliver, and what changed as a result?</label>
+            <label class="form-label" for="delivered_changed" data-client="What did we deliver, and what changed as a result?" data-partner="What did we accomplish together, and what changed as a result?">What did we deliver, and what changed as a result?</label>
             <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">Focus on outcomes — what got faster, clearer, cheaper, or newly possible.</p>
             <textarea class="form-textarea" id="delivered_changed" name="delivered_changed" placeholder="Example: They delivered a prioritized AI roadmap and stood up our first two use cases. Work that used to take three weeks now takes three days."></textarea>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="how_we_worked">What stood out about how we worked with you?</label>
+            <label class="form-label" for="how_we_worked" data-client="What stood out about how we worked with you?" data-partner="What stood out about how we worked together?">What stood out about how we worked with you?</label>
             <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">The working relationship — communication, pace, how they handled your team.</p>
             <textarea class="form-textarea" id="how_we_worked" name="how_we_worked" placeholder="Example: They met us where we were, explained things without jargon, and treated our staff as partners rather than an audience."></textarea>
           </div>
 
-          <div class="form-group">
+          <div class="form-group client-only">
             <label class="form-label" for="partners_who">Beyond the core Mission Forge team, did you work with any of our specialist partners or extended team? If so, who?</label>
             <input class="form-input" type="text" id="partners_who" name="partners_who" placeholder="Names or roles of anyone on the extended team" />
           </div>
 
-          <div class="form-group">
+          <div class="form-group client-only">
             <label class="form-label">If you worked with a partner or extended team, how would you rate their work?</label>
             <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:6px;">
               <span style="font-size:.8rem;color:var(--text-secondary);">Exceptional</span>
@@ -169,10 +178,29 @@
             <p style="font-size:.82rem;color:var(--text-secondary);margin-top:8px;">Skip if you worked only with the core team.</p>
           </div>
 
-          <div class="form-group">
+          <div class="form-group client-only">
             <label class="form-label" for="partner_feedback">Any feedback on that partner or extended team?</label>
             <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">Anything specific about the specialist or extended team you worked with.</p>
             <textarea class="form-textarea" id="partner_feedback" name="partner_feedback" placeholder="Example: Their engineer was clearly senior and responsive — often fixed issues before we even flagged them."></textarea>
+          </div>
+
+          <div class="form-group client-only">
+            <label class="form-label">How would you rate the value you received relative to your investment?</label>
+            <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:6px;">
+              <span style="font-size:.8rem;color:var(--text-secondary);">Exceptional value</span>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="value_rating" value="5" style="accent-color:var(--gold);" /> 5</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="value_rating" value="4" style="accent-color:var(--gold);" /> 4</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="value_rating" value="3" style="accent-color:var(--gold);" /> 3</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="value_rating" value="2" style="accent-color:var(--gold);" /> 2</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="value_rating" value="1" style="accent-color:var(--gold);" /> 1</label>
+              <span style="font-size:.8rem;color:var(--text-secondary);">Limited value</span>
+            </div>
+          </div>
+
+          <div class="form-group client-only">
+            <label class="form-label" for="value_return">If it's easy to quantify, what return or value did this work create for your organization?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">Optional. A figure, a time saved, or a result you're proud of — only if you're comfortable sharing.</p>
+            <textarea class="form-textarea" id="value_return" name="value_return" placeholder="Example: The roadmap paid for itself within the first year through faster delivery and fewer stalled projects."></textarea>
           </div>
 
           <div class="form-group">
@@ -221,7 +249,7 @@
           <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">You decide whether and how your feedback is used. Nothing here is shared publicly without your explicit choice below.</p>
 
           <div class="form-group">
-            <label class="form-label">May we share your feedback publicly (website, proposals, case studies, social)? *</label>
+            <label class="form-label">May we share your feedback publicly? *</label>
             <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
               <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="share_permission" value="Yes — may attribute" required style="accent-color:var(--gold);margin-top:3px;" /> Yes — and you may attribute it to me (see how below)</label>
               <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="share_permission" value="Yes — anonymous only" style="accent-color:var(--gold);margin-top:3px;" /> Yes — but only without my name (anonymous)</label>
@@ -376,6 +404,27 @@
       // from; if absent, the required name/email still identify the client.
       tokenField.value = token;
       survey.style.display = "block";
+
+      // Tailor wording and show/hide questions by respondent type.
+      function applyMode(type) {
+        var isPartner = (type === "Partner");
+        var hideEls = surveyForm.querySelectorAll(".client-only");
+        for (var i = 0; i < hideEls.length; i++) {
+          hideEls[i].style.display = isPartner ? "none" : "";
+        }
+        var swapEls = surveyForm.querySelectorAll("[data-client]");
+        for (var j = 0; j < swapEls.length; j++) {
+          var el = swapEls[j];
+          el.textContent = isPartner
+            ? (el.getAttribute("data-partner") || el.getAttribute("data-client"))
+            : el.getAttribute("data-client");
+        }
+      }
+      applyMode("Client"); // default until a choice is made
+      var typeRadios = surveyForm.querySelectorAll('input[name="respondent_type"]');
+      for (var k = 0; k < typeRadios.length; k++) {
+        typeRadios[k].addEventListener("change", function () { applyMode(this.value); });
+      }
 
       var isFormspree = SUBMIT_ENDPOINT.indexOf("formspree.io") !== -1;
 
