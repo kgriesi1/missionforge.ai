@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Feedback, Mission Forge AI</title>
+  <meta name="description" content="By-invitation client feedback for Mission Forge AI." />
+  <!-- Keep this page out of search engines and out of nav/footer. It is shared by invitation only. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-mark">
+          <img src="favicon-48.png" width="36" height="36" alt="Mission Forge AI logo mark" />
+        </div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">Mission Forge</span>
+          <span class="nav__logo-sub">Artificial Intelligence</span>
+        </div>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html"        class="nav__link">Home</a>
+        <a href="services.html"     class="nav__link">Services</a>
+        <a href="case-studies.html" class="nav__link">Case Studies</a>
+        <a href="about.html"        class="nav__link">About</a>
+        <a href="contact.html"      class="nav__link nav__cta">Start a Conversation</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container page-header__content">
+      <div class="gold-line fade-up"></div>
+      <span class="eyebrow fade-up">By Invitation</span>
+      <h1 class="fade-up fade-up-delay-1">Client Feedback</h1>
+      <p class="lead fade-up fade-up-delay-2">
+        Thank you for the work we did together. Your honest reflection helps us improve and, where you allow it, helps others understand what this kind of work can do. It takes about five minutes, and you control how anything you write is used.
+      </p>
+    </div>
+  </header>
+
+  <!-- GATE + SURVEY -->
+  <section class="contact-section">
+    <div class="container" style="max-width:680px;">
+
+      <!-- NO INVITE NOTICE (shown when the link has no personal code) -->
+      <div id="noinvite" style="display:none;padding:40px;background:var(--off-white);border-left:3px solid var(--gold);">
+        <div class="eyebrow" style="margin-bottom:16px;">Personal Invitation Required</div>
+        <p style="font-size:.95rem;color:var(--text-secondary);">
+          This survey is reached through the personal link we emailed you. Please open that link directly. If you can't find it, reply to our email or write to <a href="mailto:ken@missionforge.ai" style="color:var(--gold);">ken@missionforge.ai</a> and we'll resend it.
+        </p>
+      </div>
+
+      <!-- SURVEY (revealed after correct code) -->
+      <div id="survey" style="display:none;">
+        <form class="contact-form" id="surveyForm">
+
+          <!-- SECTION 1 -->
+          <div class="eyebrow" style="margin-bottom:6px;">About This Engagement</div>
+          <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">A little context so we can connect your feedback to the right work. All optional.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Your Name</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="title">Your Title / Role</label>
+              <input class="form-input" type="text" id="title" name="title" placeholder="Chief Operating Officer" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="organization">Organization</label>
+              <input class="form-input" type="text" id="organization" name="organization" placeholder="Your organization" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email (only if open to follow-up)</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="jane@example.org" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="engagement">Which engagement or project is this about?</label>
+            <input class="form-input" type="text" id="engagement" name="engagement" placeholder="e.g., AI strategy roadmap, spring 2026" />
+          </div>
+
+          <!-- SECTION 2 -->
+          <div class="eyebrow" style="margin:40px 0 6px;">Your Experience</div>
+          <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">There are no wrong answers. Plain, specific language is more useful to us than polish.</p>
+
+          <div class="form-group">
+            <label class="form-label">Overall, how would you rate your experience? *</label>
+            <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:6px;">
+              <span style="font-size:.8rem;color:var(--text-secondary);">Exceptional</span>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="overall_rating" value="5" required style="accent-color:var(--gold);" /> 5</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="overall_rating" value="4" style="accent-color:var(--gold);" /> 4</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="overall_rating" value="3" style="accent-color:var(--gold);" /> 3</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="overall_rating" value="2" style="accent-color:var(--gold);" /> 2</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="overall_rating" value="1" style="accent-color:var(--gold);" /> 1</label>
+              <span style="font-size:.8rem;color:var(--text-secondary);">Poor</span>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:24px;">
+            <label class="form-label">How likely are you to recommend us to a peer? *</label>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:6px;">
+              <span style="font-size:.8rem;color:var(--text-secondary);width:100%;">10 = Extremely likely &nbsp;·&nbsp; 0 = Not at all likely</span>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="10" required style="accent-color:var(--gold);" /> 10</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="9" style="accent-color:var(--gold);" /> 9</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="8" style="accent-color:var(--gold);" /> 8</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="7" style="accent-color:var(--gold);" /> 7</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="6" style="accent-color:var(--gold);" /> 6</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="5" style="accent-color:var(--gold);" /> 5</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="4" style="accent-color:var(--gold);" /> 4</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="3" style="accent-color:var(--gold);" /> 3</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="2" style="accent-color:var(--gold);" /> 2</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="1" style="accent-color:var(--gold);" /> 1</label>
+              <label style="display:flex;align-items:center;gap:4px;font-size:.9rem;cursor:pointer;"><input type="radio" name="recommend_nps" value="0" style="accent-color:var(--gold);" /> 0</label>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:24px;">
+            <label class="form-label" for="before_situation">Before the engagement, what was the situation or problem you needed to solve?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">A sentence or two on where things stood and what wasn't working.</p>
+            <textarea class="form-textarea" id="before_situation" name="before_situation" placeholder="Example: We believed AI could strengthen our programs, but we had no strategy, no governance, and a team unsure where to start."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="delivered_changed">What did we deliver, and what changed as a result?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">Focus on outcomes — what got faster, clearer, cheaper, or newly possible.</p>
+            <textarea class="form-textarea" id="delivered_changed" name="delivered_changed" placeholder="Example: They delivered a prioritized AI roadmap and stood up our first two use cases. Work that used to take three weeks now takes three days."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="how_we_worked">What stood out about how we worked with you?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">The working relationship — communication, pace, how they handled your team.</p>
+            <textarea class="form-textarea" id="how_we_worked" name="how_we_worked" placeholder="Example: They met us where we were, explained things without jargon, and treated our staff as partners rather than an audience."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="partners_who">Beyond the core Mission Forge team, did you work with any of our specialist partners or extended team? If so, who?</label>
+            <input class="form-input" type="text" id="partners_who" name="partners_who" placeholder="Names or roles of anyone on the extended team" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">If you worked with a partner or extended team, how would you rate their work?</label>
+            <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:6px;">
+              <span style="font-size:.8rem;color:var(--text-secondary);">Exceptional</span>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="partner_rating" value="5" style="accent-color:var(--gold);" /> 5</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="partner_rating" value="4" style="accent-color:var(--gold);" /> 4</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="partner_rating" value="3" style="accent-color:var(--gold);" /> 3</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="partner_rating" value="2" style="accent-color:var(--gold);" /> 2</label>
+              <label style="display:flex;align-items:center;gap:5px;font-size:.95rem;cursor:pointer;"><input type="radio" name="partner_rating" value="1" style="accent-color:var(--gold);" /> 1</label>
+              <span style="font-size:.8rem;color:var(--text-secondary);">Poor</span>
+            </div>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin-top:8px;">Skip if you worked only with the core team.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="partner_feedback">Any feedback on that partner or extended team?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">Anything specific about the specialist or extended team you worked with.</p>
+            <textarea class="form-textarea" id="partner_feedback" name="partner_feedback" placeholder="Example: Their engineer was clearly senior and responsive — often fixed issues before we even flagged them."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="impact_summary">If you had to sum up the impact in a sentence or two, what would you say?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">This is often the line we'd love to quote — write it the way you'd want it read.</p>
+            <textarea class="form-textarea" id="impact_summary" name="impact_summary" placeholder="Example: Mission Forge gave us the clarity and confidence to use AI responsibly, and the results showed up in months, not years."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="could_improve">What could we have done better?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">Be candid — even small things help. This stays internal unless you tell us otherwise.</p>
+            <textarea class="form-textarea" id="could_improve" name="could_improve" placeholder="Example: Looping in our finance team a little earlier would have smoothed the rollout."></textarea>
+          </div>
+
+          <!-- SECTION 3 -->
+          <div class="eyebrow" style="margin:40px 0 6px;">Looking Ahead</div>
+          <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">No pressure here — just helps us understand how we can be useful over time.</p>
+
+          <div class="form-group">
+            <label class="form-label">Would you work with Mission Forge again?</label>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Definitely" style="accent-color:var(--gold);margin-top:3px;" /> Definitely</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Probably" style="accent-color:var(--gold);margin-top:3px;" /> Probably</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Unsure" style="accent-color:var(--gold);margin-top:3px;" /> Unsure</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="work_again" value="Probably not" style="accent-color:var(--gold);margin-top:3px;" /> Probably not</label>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:24px;">
+            <label class="form-label">Would you welcome us staying in touch about work down the road?</label>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="keep_in_touch" value="Yes, I'd welcome that" style="accent-color:var(--gold);margin-top:3px;" /> Yes, I'd welcome that</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="keep_in_touch" value="Maybe later" style="accent-color:var(--gold);margin-top:3px;" /> Maybe later</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="keep_in_touch" value="No thank you" style="accent-color:var(--gold);margin-top:3px;" /> No thank you</label>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:24px;">
+            <label class="form-label" for="future_work">Where might we be able to help next?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">No pressure — even a rough idea helps us know how to be useful.</p>
+            <textarea class="form-textarea" id="future_work" name="future_work" placeholder="Example: We'll likely need help training staff and measuring impact as we scale the new tools."></textarea>
+          </div>
+
+          <!-- SECTION 4 -->
+          <div class="eyebrow" style="margin:40px 0 6px;">Permission &amp; Attribution</div>
+          <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:24px;">You decide whether and how your feedback is used. Nothing here is shared publicly without your explicit choice below.</p>
+
+          <div class="form-group">
+            <label class="form-label">May we share your feedback publicly (website, proposals, case studies, social)? *</label>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="share_permission" value="Yes — may attribute" required style="accent-color:var(--gold);margin-top:3px;" /> Yes — and you may attribute it to me (see how below)</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="share_permission" value="Yes — anonymous only" style="accent-color:var(--gold);margin-top:3px;" /> Yes — but only without my name (anonymous)</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="share_permission" value="No — internal only" style="accent-color:var(--gold);margin-top:3px;" /> No — please keep my feedback internal only</label>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:24px;">
+            <label class="form-label">If we may attribute it, how would you like to be credited?</label>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="attribution" value="Full — name, title, organization" style="accent-color:var(--gold);margin-top:3px;" /> Full attribution — my name, title, and organization</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="attribution" value="Title and organization only" style="accent-color:var(--gold);margin-top:3px;" /> Title and organization only — e.g., "COO, national education nonprofit"</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="attribution" value="Role and org type only" style="accent-color:var(--gold);margin-top:3px;" /> Role and organization type only — e.g., "Executive Director, faith-based nonprofit"</label>
+              <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;"><input type="radio" name="attribution" value="Other" style="accent-color:var(--gold);margin-top:3px;" /> Other — let me write exactly how I'd like to be credited:</label>
+              <input class="form-input" type="text" id="attribution_other" name="attribution_other" placeholder="How you'd like to be credited" style="margin-left:26px;max-width:calc(100% - 26px);" />
+            </div>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin-top:10px;">Skip this if you chose anonymous or internal-only above.</p>
+          </div>
+
+          <div class="form-group" style="margin-top:24px;">
+            <label class="form-label" for="verbatim_quote">Is there a specific quote you'd be happy for us to use word-for-word?</label>
+            <p style="font-size:.82rem;color:var(--text-secondary);margin:-2px 0 8px;">Optional. If you write it here, we'll use it exactly as written, with the attribution you chose below.</p>
+            <textarea class="form-textarea" id="verbatim_quote" name="verbatim_quote" placeholder="Example: Working with Mission Forge was the best technology decision we made this year."></textarea>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:12px;" class="form-group">
+            <input type="checkbox" id="consent" name="consent" required style="margin-top:3px;accent-color:var(--gold);width:16px;height:16px;flex-shrink:0;" />
+            <label for="consent" style="font-size:.82rem;color:var(--text-secondary);cursor:pointer;">
+              I confirm that I'm authorized to provide this feedback, and that my selections above reflect how Mission Forge AI may use it. *
+            </label>
+          </div>
+
+          <!-- Personal link token (auto-filled from the invitation URL) -->
+          <input type="hidden" id="client_token" name="client_token" value="" />
+
+          <!-- Anti-spam honeypot (hidden from people) -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
+
+          <p id="surveyError" style="display:none;font-size:.85rem;color:#b3261e;margin-bottom:16px;">
+            Something went wrong sending your response. Please try again, or email ken@missionforge.ai directly.
+          </p>
+
+          <div>
+            <button type="submit" id="surveySubmit" class="btn btn--gold btn--arrow" style="width:100%;justify-content:center;">
+              Submit Feedback
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- THANK YOU (revealed after submit) -->
+      <div id="thanks" style="display:none;padding:48px 40px;background:var(--off-white);border-left:3px solid var(--gold);text-align:center;">
+        <div class="eyebrow" style="margin-bottom:16px;">Received</div>
+        <h2 style="font-size:clamp(1.4rem,3vw,2rem);margin-bottom:16px;">Thank You</h2>
+        <p style="font-size:.95rem;color:var(--text-secondary);">
+          Your feedback directly shapes how we work, and where you've given permission, it helps other mission-driven organizations picture what's possible. We're grateful you took the time. <span style="white-space:nowrap;">— The Mission Forge AI Team</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand-name">Mission Forge AI</div>
+          <p class="footer__brand-desc">AI strategy and implementation for organizations that exist to serve people and change the world.</p>
+          <a href="contact.html" class="footer__link">Start a Conversation</a>
+        </div>
+        <div>
+          <div class="footer__heading">Navigate</div>
+          <div class="footer__links">
+            <a href="index.html"        class="footer__link">Home</a>
+            <a href="services.html"     class="footer__link">Services</a>
+            <a href="case-studies.html" class="footer__link">Case Studies</a>
+            <a href="about.html"        class="footer__link">About</a>
+            <a href="contact.html"      class="footer__link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Services</div>
+          <div class="footer__links">
+            <a href="services.html#ai-strategy"    class="footer__link">AI Strategy</a>
+            <a href="services.html#implementation" class="footer__link">AI Implementation</a>
+            <a href="services.html#transformation" class="footer__link">Org Transformation</a>
+            <a href="services.html#fractional"     class="footer__link">Fractional CPO / CTO / CAIO</a>
+            <a href="services.html#governance"     class="footer__link">Responsible AI</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Connect</div>
+          <div class="footer__links">
+            <a href="contact.html" class="footer__link">Contact Us</a>
+            <a href="https://www.linkedin.com/company/mission-forge-ai/" target="_blank" rel="noopener" class="footer__link">Company LinkedIn</a>
+            <a href="contact.html" class="footer__link">Book a Discovery Call</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 Mission Forge AI. All rights reserved.</div>
+        <div class="footer__legal-links">
+          <a href="privacy.html" class="footer__legal-link">Privacy</a>
+          <a href="privacy.html" class="footer__legal-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- ===================================================================
+       SURVEY SETTINGS — edit this one value
+       -------------------------------------------------------------------
+       SUBMIT_ENDPOINT: where responses are sent.
+         • For the central Google Sheet (+ email): deploy the Apps Script
+           and paste its Web app URL here (ends in /exec).
+         • Until then it falls back to Formspree (email only).
+
+       HOW ACCESS WORKS:
+       Each client gets a personal link, e.g.
+           https://missionforge.ai/feedback.html?c=acme-7f3k
+       The code after ?c= identifies that client and is saved with their
+       response, so you always know whose survey it is. Opening the page
+       without a personal code shows a "personal invitation required"
+       notice instead of the form. (This is a polite gate, not a vault:
+       a client could forward their own link, so treat each link as that
+       client's. For strict one-response / no-reuse enforcement, ask and
+       we'll switch on server-side checks in the Apps Script.)
+       =================================================================== -->
+  <script>
+    (function () {
+      // Point this at your Apps Script /exec URL for the central sheet.
+      // Leave as the Formspree URL for email-only until then.
+      var SUBMIT_ENDPOINT = "https://script.google.com/macros/s/AKfycbxNHwdlp8JNZw4TxDybjl6B29zzKZrq1kiVcZj3-8w7Xo9tulIvYWOeCD77tYMYm767/exec";
+
+      var noinvite = document.getElementById("noinvite");
+      var survey = document.getElementById("survey");
+      var thanks = document.getElementById("thanks");
+      var surveyForm = document.getElementById("surveyForm");
+      var surveyError = document.getElementById("surveyError");
+      var submitBtn = document.getElementById("surveySubmit");
+      var tokenField = document.getElementById("client_token");
+
+      // Read the personal code from the URL (?c=...).
+      var params = new URLSearchParams(window.location.search);
+      var token = (params.get("c") || "").trim();
+
+      if (token) {
+        tokenField.value = token;
+        survey.style.display = "block";
+      } else {
+        noinvite.style.display = "block";
+      }
+
+      var isFormspree = SUBMIT_ENDPOINT.indexOf("formspree.io") !== -1;
+
+      surveyForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        surveyError.style.display = "none";
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+
+        var data = new FormData(surveyForm);
+        data.append("_subject", "New client feedback survey response");
+
+        var opts = { method: "POST", body: data };
+        if (isFormspree) {
+          // Formspree returns CORS headers, so we can read success.
+          opts.headers = { "Accept": "application/json" };
+        } else {
+          // Apps Script doesn't send CORS headers; submit opaquely.
+          opts.mode = "no-cors";
+        }
+
+        fetch(SUBMIT_ENDPOINT, opts).then(function (response) {
+          // In no-cors mode the response is opaque (ok === false), but the
+          // request still reaches the script, so treat that as success.
+          if (response.ok || opts.mode === "no-cors") {
+            survey.style.display = "none";
+            thanks.style.display = "block";
+            thanks.scrollIntoView({ behavior: "smooth", block: "center" });
+          } else {
+            throw new Error("Submission failed");
+          }
+        }).catch(function () {
+          surveyError.style.display = "block";
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit Feedback";
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
